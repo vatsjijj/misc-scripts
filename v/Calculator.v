@@ -14,31 +14,26 @@ fn main() {
 
         println('')
 
-        /* Convert everything from a string to a
-         double precision float, with the exception
-         of modulo
-        */
-        add := value1.f64() + value2.f64()
-        sub := value1.f64() - value2.f64()
-        mul := value1.f64() * value2.f64()
-        div := value1.f64() / value2.f64()
-        mod := value1.int() % value2.int()
-
         // Initiate match case, fuck `else if` statements
         match operator {
                 'add' {
+                        add := value1.f64() + value2.f64()
                         println('$value1 $operator $value2 = $add\n')
                 }
                 'sub' {
+                        sub := value1.f64() - value2.f64()
                         println('$value1 $operator $value2 = $sub\n')
                 }
                 'mul' {
+                        mul := value1.f64() * value2.f64()
                         println('$value1 $operator $value2 = $mul\n')
                 }
                 'div' {
+                        div := value1.f64() / value2.f64()
                         println('$value1 $operator $value2 = $div\n')
                 }
                 'mod' {
+                        mod := value1.int() % value2.int()
                         println('$value1 $operator $value2 = $mod\n')
                 }
                 // Print error message
